@@ -1,2 +1,13 @@
-.env
+/Backend/node_modules
+/Backend/dist
+/Backend/.env
+/Backend/.env.example
+/Backend/.env.local
+/Backend/.env.development
+/Backend/.env.test
+/Backend/.env.production
+/Backend/package-lock.json
+/Backend/yarn.lock
+/Backend/.vscode
+
 
