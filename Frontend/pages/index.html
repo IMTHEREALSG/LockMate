@@ -13,6 +13,8 @@
     src="https://kit.fontawesome.com/2ca57fca93.js"
     crossorigin="anonymous"
   ></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
 <body class ="bg-gradient-to-t from-blue-300 via-blue-400 to-blue-500 min-h-screen flex flex-col">
     <div class="flex justify-center w-full mt-4">
@@ -33,25 +35,96 @@
         <div class="flex flex-col items-center justify-center">
             <div class="bg-transparent max-w-4xl items-center justify-center m-20 mt-15 p-2 md:flex p-10">
                 <div class="text-center">
-                    <!-- Title with hover effect -->
                     <h1 class="md:text-5xl text-4xl text-blue-900 font-bold mb-5 px-4 py-2 inline-block rounded-xl transition-all duration-500 ease-in-out hover:text-blue-700 hover:scale-110 hover:shadow-2xl">
                         LockMart
                     </h1>
-                    <!-- Image with hover effect -->
                     <div class="flex justify-center items-center mt-1">
                         <img src="../assets/icon1.png" alt="icon.png" class="w-25 h-20 rounded-lg transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-lg">
                     </div>
-                </div>
-                <div>
-                    <a href=""></a>
+                    <h1 class="md:m-10 md:text-2xl text-l font-semibold mb-6 m-1 text-gray-200">
+                        Guarding Your Keys.
+                    </h1>
+                    <!-- Button moved here -->
+                    <div class="mt-4">
+                        <a href="./signin.html" class="text-Gray-800 border px-4 shadow transform transition-all duration-500 ease-in-out py-2 bg-white-800 hover:bg-blue-800 hover:text-white hover:shadow-2xl hover:scale-110 hover:border-gray-900 rounded-xl">
+                            <i class="fa-solid fa-notes-medical"></i> Secure Now
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <div class="flex justify-center md:mb-40 m-4 md:m-0">
+                <div class="max-w-4xl w-full rounded-3xl grid-cols-1 md:grid-cols-2 grid justify-between backdrop-filter backdrop-blur-md bg-opacity-10 text-blue-900">
+                  <div
+                    data-aos="fade-up"
+                    class="h-55 border col-span-1 rounded-2xl m-5 p-5 bg-white transform transition duration-300 hover:-translate-y-2"
+                  >
+                    <i class="fa-solid fa-lock"> </i>
+                    <span class="text-2xl font-bold">Securely Store Passwords</span>
+                    <br /><br />
+                    Keep all your credentials safe with powerful encryption. LockMart ensures your sensitive data is locked down and secure.
+                  </div>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    class="h-55 border col-span-1 rounded-2xl m-5 p-5 bg-white transform transition duration-300 hover:-translate-y-2"
+                  >
+                    <i class="fa-solid fa-hand-point-up"></i>
+                    <span class="text-2xl font-bold">Quick Access</span>
+                    <br /><br />
+                    Access your stored passwords easily and quickly with our intuitive interface. No more forgetting passwords or struggling with multiple logins.
+                  </div>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                    class="h-55 border col-span-1 rounded-2xl m-5 p-5 bg-white transform transition duration-300 hover:-translate-y-2"
+                  >
+                    <i class="fa-solid fa-shield-halved"> </i>
+                    <span class="text-2xl font-bold">Enhanced Privacy</span>
+                    <br /><br />
+                    Your data stays private with LockMart, keeping your credentials solely under your control.
+                  </div>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="600"
+                    class="h-55 border col-span-1 rounded-2xl m-5 p-5 bg-white transform transition duration-300 hover:-translate-y-2"
+                  >
+                    <i class="fa-solid fa-mobile-screen"> </i>
+                    <span class="text-2xl font-bold">User-Friendly Management</span>
+                    <br /><br />
+                    Add, view, or update passwords with a seamless experience. LockMart makes managing multiple passwords simple and stress-free.
+                  </div>
+                </div>
+              </div>
         </div>
     </main>
-    
-    
-     
-    
 
+    <div class="flex justify-center mb-4">
+    <footer
+    class="text-gray-900 mx-5 max-w-4xl w-full p-3 flex justify-between gap-6 bg-white rounded-2xl items-center"
+  >
+    <div class="flex items-center">
+        <img src="../assets/navbar.png" alt="navbar.icon" class="w-10 h-10" />
+      <h3 class="">LockMart</h3>
+    </div>
+    <span>
+    <a href="" target="_blank" aria-label="Visit Twitter"
+      ><i
+        class="fa-brands fa-square-x-twitter text-blue-900 hover:text-blue-500"
+      ></i
+    ></a>
+    <a href="" target="_blank"
+      ><i
+        class="fa-brands fa-github text-blue-900 hover:text-blue-500"
+      ></i
+    ></a>
+  </span>
+    </footer>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
 </body>
 </html>
