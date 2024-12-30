@@ -257,7 +257,7 @@ async function decryptPassword(id, item) {
                             <button class="text-red-500 hover:text-red-700 transition duration-300" onclick="hidePassword(this.parentElement)">
                                      <i class="fa-solid fa-eye-slash"></i>
                             </button>
-                            <button class="text-red-500 hover:text-red-700 transition duration-300" onclick="deletePassword(this.parentElement)">
+                            <button class="text-red-500 hover:text-red-700 transition duration-300" onclick="deletePassword('${id},this.parentElement)">
                                      <i class="fa-solid fa-trash"></i>
                             </button>`;
 

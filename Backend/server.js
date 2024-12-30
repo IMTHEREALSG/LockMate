@@ -8,7 +8,7 @@ require('./config');
 require('dotenv').config();
 const app = express();
 
-const allowedFrontendUrls = ['http://127.0.0.1:5500','https://lock-mate-6mbl.vercel.app']; // Add your allowed URLs here
+const allowedFrontendUrls = ['http://127.0.0.1:5500','https://lockmate-3.vercel.app']; // Add your allowed URLs here
 
 const corsOptions = {
     origin: function (origin, callback) {
