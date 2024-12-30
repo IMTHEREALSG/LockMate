@@ -190,7 +190,7 @@ async function getPasswords(){
 function addPasswordToUI(data) {
   const list = document.getElementById("password-list");
   const item = document.createElement("li");
-  li.classList.add(
+  list.classList.add(
     "mb-1 bg-black text-white p-3 rounded flex justify-between items-center"
   );
   item.dataset.id = data.id;
