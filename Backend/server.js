@@ -10,17 +10,20 @@ const app = express();
 
 
 
-const allowedFrontendUrl = 'https://lock-mate-6mbl.vercel.app';
+const allowedFrontendUrl = 'https://lock-mate-6mbl.vercel.app/'; // URL of the frontend
 
 // CORS configuration
+// app.use(cors({
+//     origin: allowedFrontendUrl, // Allow only this frontend
+//     credentials: true,          // Allow cookies to be sent
+//     allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
+//     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] 
+// }));
 app.use(cors({
-    origin: allowedFrontendUrl, // Allow only this frontend
-    credentials: true,          // Allow cookies to be sent
-    allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
-    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] 
+    origin: allowedFrontendUrl,
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
-app.options('*', cors());
 
 app.use(cookieParser());
 app.use(express.json());
