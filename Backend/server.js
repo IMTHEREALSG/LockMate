@@ -10,12 +10,20 @@ const app = express();
 
 
 
-app.use(cors(
-    {
-        origin: 'https://lockmate.netlify.app/',
-        credentials: true
-    }
-));
+app.use(cors({
+    origin: 'https://lockmate.netlify.app', // Ensure no trailing slash
+    credentials: true, // Allows cookies and credentials
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] // Specify allowed HTTP methods
+}));
+
+app.options('*', cors({
+    origin: 'https://lockmate.netlify.app',
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+}));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../Frontend/pages')));
