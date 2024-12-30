@@ -136,8 +136,8 @@ document
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          passname,
-          password,
+          pname:passname,
+          pword:password,
         }),
         credentials: "include",
       });
