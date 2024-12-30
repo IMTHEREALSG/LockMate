@@ -1,4 +1,4 @@
-const url = "https://lockmate-v1.vercel.app";
+const url = "https://lock-mate-three.vercel.app";
 
 function showAlert(message, type = "success", duration = 1000) {
   const alert = document.createElement("div");
