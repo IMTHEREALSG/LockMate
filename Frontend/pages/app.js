@@ -45,7 +45,7 @@ document
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          MobNum,
+          mobile_no: MobNum,
           username,
           password,
         }),
@@ -214,7 +214,7 @@ function addPasswordToUI(data) {
   );
 
   item.innerHTML = `<div>
-                       <strong class="text-white mb-10">${data.PassName}</strong>
+                       <strong class="text-white mb-10">${data.pname}</strong>
                        <p class="text-gray-500 text-sm">Encrypt Password</p>
                       </div>`;
   decryptbtn.addEventListener("click", async () => {
