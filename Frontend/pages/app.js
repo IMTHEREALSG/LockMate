@@ -297,7 +297,7 @@ async function deletePassword(id, item) {
 function hidePassword(item){
     const passname = item.querySelector("strong").textContent;
     const passId = item.dataset.id;
-    listItem.innerHTML = `<div>
+    item.innerHTML = `<div>
                             <strong class="text-white mb-10">${passname}</strong>
                             <p class="text-gray-500 text-sm">Encrypt Password</p>
                           </div>
