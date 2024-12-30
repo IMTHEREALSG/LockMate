@@ -1,4 +1,4 @@
-const url = "https://lock-mate-three.vercel.app";
+const url = "https://lockmate-4omt.onrender.com";
 
 function showAlert(message, type = "success", duration = 1000) {
   const alert = document.createElement("div");
