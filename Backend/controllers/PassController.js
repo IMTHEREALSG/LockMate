@@ -13,7 +13,10 @@ async function addPassword(req, res) {
             userId
         });
         await password.save();
-        return res.status(201).json({ message: 'Password added successfully' });
+        return res.status(201).json({
+            PassName: password.pname,
+            id: password._id
+        });
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
