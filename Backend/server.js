@@ -10,7 +10,7 @@ const app = express();
 
 
 
-const allowedFrontendUrl = 'https://lock-mate-6mbl.vercel.app/'; // URL of the frontend
+const allowedFrontendUrl = '*'; // URL of the frontend
 
 // CORS configuration
 // app.use(cors({
