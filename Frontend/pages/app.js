@@ -1,4 +1,4 @@
-const url = "https://lockmate-v1.vercel.app/";
+const url = "https://lockmate-v1.vercel.app";
 
 function showAlert(message, type = "success", duration = 1000) {
   const alert = document.createElement("div");
@@ -158,7 +158,7 @@ document
 async function getPasswords(){
     const currentPage = window.location.pathname;
 
-    if (!token && currentPage.includes("dashboard")) {
+    if (currentPage.includes("Main") && !localStorage.getItem("username")) {
       window.location.href = "signin.html";
       return;
     }
