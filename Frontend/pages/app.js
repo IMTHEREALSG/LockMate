@@ -189,7 +189,14 @@ document
     const list = document.getElementById("password-list");
     const item = document.createElement("li");
     item.classList.add(
-      "mb-1 bg-black text-white p-3 rounded flex justify-between items-center"
+      "mb-1",
+      "bg-black",
+      "text-white",
+      "p-3",
+      "rounded", 
+      "flex", 
+      "justify-between",
+      "items-center"
     );
     item.dataset.id = data.id;
   
