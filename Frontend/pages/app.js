@@ -154,79 +154,79 @@ document
     }
   });
 
-
-async function getPasswords(){
+ async function getPasswords() {
     const currentPage = window.location.pathname;
-
+  
     if (currentPage.includes("Main") && !localStorage.getItem("username")) {
       window.location.href = "signin.html";
       return;
     }
   
-    try{
-      const response = await fetch(`${url}/password`,{
-        method:"GET",
-        headers:{
-          "Content-Type":"application/json"
+    try {
+      const response = await fetch(`${url}/password`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
         },
-        credentials:"include"
+        credentials: "include",
       });
-        if(response.ok){
-            const data = await response.json();
-            const list = document.getElementById("password-list");
-            list.innerHTML = "<p></p>";            
-            data.forEach((item) => {
-            addPasswordToUI(item);
-         });
-        }else{
-            showAlert("Failed to fetch passwords", "error");
-        }
-         
-    }catch(error){
-        showAlert("Network error", "error");
-    }   
-}
-
-function addPasswordToUI(data) {
-  const list = document.getElementById("password-list");
-  const item = document.createElement("li");
-  list.classList.add(
-    "mb-1 bg-black text-white p-3 rounded flex justify-between items-center"
-  );
-  item.dataset.id = data.id;
-
-  const decryptbtn = document.createElement("button");
-  decryptbtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
-  decryptbtn.classList.add(
-    "text-white",
-    "hover:text-red-400",
-    "transition",
-    "duration-300"
-  );
-
-  const deletebtn = document.createElement("button");
-  deletebtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
-  deletebtn.classList.add(
-    "text-white",
-    "hover:text-red-400",
-    "transition",
-    "duration-300"
-  );
-
-  item.innerHTML = `<div>
-                       <strong class="text-white mb-10">${data.pname}</strong>
-                       <p class="text-gray-500 text-sm">Encrypt Password</p>
-                      </div>`;
-  decryptbtn.addEventListener("click", async () => {
-    decryptPassword(data.id, item);
-  });
-  deletebtn.addEventListener("click", async () => {
-    deletePassword(data.id, item);
-  });
-  item.appendChild(decryptbtn);
-  item.appendChild(deletebtn);
-  list.insertBefore(item, list.firstChild);
-}
+      if (response.ok) {
+        const data = await response.json();
+        const list = document.getElementById("password-list");
+        list.innerHTML = ""; // Clear the list properly
+        data.forEach((item) => {
+          addPasswordToUI(item);
+        });
+      } else {
+        showAlert("Failed to fetch passwords", "error");
+      }
+    } catch (error) {
+      showAlert("Network error", "error");
+    }
+  }
+  
+  function addPasswordToUI(data) {
+    const list = document.getElementById("password-list");
+    const item = document.createElement("li");
+    item.classList.add(
+      "mb-1 bg-black text-white p-3 rounded flex justify-between items-center"
+    );
+    item.dataset.id = data.id;
+  
+    const decryptbtn = document.createElement("button");
+    decryptbtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    decryptbtn.classList.add(
+      "text-white",
+      "hover:text-red-400",
+      "transition",
+      "duration-300"
+    );
+  
+    const deletebtn = document.createElement("button");
+    deletebtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    deletebtn.classList.add(
+      "text-white",
+      "hover:text-red-400",
+      "transition",
+      "duration-300"
+    );
+  
+    const content = document.createElement("div");
+    content.innerHTML = `<strong class="text-white mb-10">${data.pname}</strong>
+                         <p class="text-gray-500 text-sm">Encrypt Password</p>`;
+  
+    decryptbtn.addEventListener("click", async () => {
+      decryptPassword(data.id, item);
+    });
+    deletebtn.addEventListener("click", async () => {
+      deletePassword(data.id, item);
+    });
+  
+    item.appendChild(content);
+    item.appendChild(decryptbtn);
+    item.appendChild(deletebtn);
+    list.insertBefore(item, list.firstChild);
+  } 
 
 async function decryptPassword(id, item) {
   try {
