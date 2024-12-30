@@ -141,7 +141,7 @@ document
         }),
         credentials: "include",
       });
-      if (response.ok) {
+      if (response.status === 201) {
         const data = await response.json();
         addPasswordToUI(data);
         document.getElementById("password-form").reset();
@@ -170,7 +170,7 @@ document
         },
         credentials: "include",
       });
-      if (response.ok) {
+      if (response.status === 200) {
         const data = await response.json();
         const list = document.getElementById("password-list");
         list.innerHTML = ""; // Clear the list properly
