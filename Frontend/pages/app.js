@@ -117,7 +117,7 @@ const heading = document.getElementById("dashname");
 console.log(heading);
 if (heading) {
   if (storedname) {
-    heading.innerHTML = `Hello ${storedname}👋 Your Dashboard `;
+    heading.innerHTML = `Hello ${storedname.split("@")[0]}👋 Your Dashboard `;
   } else {
     heading.innerHTML = `Hello User👋 Your Dashboard `;
   }
@@ -150,7 +150,7 @@ document
         showAlert(data.message, "error");
       }
     } catch (error) {
-      showAlert("Network error", "error");
+      console.log(error);
     }
   });
 
@@ -161,7 +161,7 @@ document
       window.location.href = "signin.html";
       return;
     }
-  
+   if(currentPage.includes("Main")) {
     try {
       const response = await fetch(`${url}/password`, {
         method: "GET",
@@ -173,7 +173,7 @@ document
       if (response.status === 200) {
         const data = await response.json();
         const list = document.getElementById("password-list");
-        list.innerHTML = ""; // Clear the list properly
+        list.innerHTML = ""; 
         data.forEach((item) => {
           addPasswordToUI(item);
         });
@@ -184,6 +184,7 @@ document
       showAlert("Network error", "error");
     }
   }
+}
   
   function addPasswordToUI(data) {
     const list = document.getElementById("password-list");
