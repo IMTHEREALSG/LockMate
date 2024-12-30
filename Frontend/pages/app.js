@@ -94,7 +94,7 @@ document.getElementById("loginform")?.addEventListener("submit", async (e) => {
       localStorage.setItem("username", username);
       showAlert("Login Successful!", "success", 1000);
       setTimeout(() => {
-        window.location.href = "dashboard.html";
+        window.location.href = "Main.html";
       }, 1000);
     } else {
       const data = await response.json();
