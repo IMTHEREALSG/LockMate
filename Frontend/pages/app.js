@@ -305,7 +305,7 @@ function hidePassword(item){
                             <button class="text-white hover:text-green-700 transition duration-300" onclick="decryptPassword('${passId}', this.parentElement)">
             <i class="fa-solid fa-eye"></i>
         </button>
-         <button class="text-white hover:text-red-700 transition duration-300" onclick="deletePassword(this.parentElement)">
+         <button class="text-white hover:text-red-700 transition duration-300" onclick="deletePassword('${passId}',this.parentElement)">
                    <i class="fa-solid fa-trash"></i>
                 </button>`;
 }
