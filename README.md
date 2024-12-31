@@ -6,15 +6,12 @@ A secure and feature-rich password manager web application built with **HTML**, 
 
 ## Key Features
 
-- **AES Encryption:** All passwords are securely encrypted using the AES algorithm, implemented with the **crypto-js** library.
+- **AES Encryption:** All passwords are securely encrypted using the **AES** algorithm, implemented with the **crypto-js** library.
+- **Secure Authentication with Cookie-based JWT**: User authentication is protected using JWT tokens stored in secure cookies. This ensures session persistence and provides secure, stateless user sessions.
 - **Secure Authentication:** User signup and login are protected with JWT. Passwords are hashed and salted using the **bcrypt** library for enhanced security.
 - **Input Validation:** Prevent SQL injection attacks with input validation powered by **Zod**.
 - **Responsive Design:** Fully optimized for mobile, tablet, and desktop devices.
-- **Password Strength Indicator:** Offers a visual assessment of password strength.
 - **HTTPS Communication:** Ensures encrypted data transmission between client and server.
-- **Search Functionality:** Enables quick searching of stored passwords.
-- **Organized Categories:** Allows categorization of passwords (e.g., Social Media, Banking, Email).
-- **Export/Import Options:** Securely export or import password data as needed.
 - **Advanced Security Practices:** Features sanitized queries, rigorous input validation, and other best practices for security.
 
 ---
