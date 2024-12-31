@@ -1,6 +1,6 @@
-# Password Manager
+# LockMate
 
-A secure and feature-rich password manager web application built with **HTML**, **CSS**, **Tailwind CSS**, **Express.js**, and **MongoDB**. This application ensures robust security for user data through encryption and provides a seamless interface for managing passwords efficiently. The frontend is deployed on **Vercel**, and the backend is deployed on **Render**.
+A secure and feature-rich password manager web application built with **HTML**, **CSS**, **Tailwind CSS**, **Express.js**, and **MongoDB**. This application ensures robust security for user data through encryption and provides a seamless interface for managing passwords efficiently.
 
 ---
 
@@ -20,6 +20,7 @@ A secure and feature-rich password manager web application built with **HTML**, 
 
 - **Frontend:** Hosted on [Vercel](https://vercel.com/)
 - **Backend:** Hosted on [Render](https://render.com/)
+
 - **Live Application:** [Password Manager](https://lockmate-3.vercel.app/)
 
 ---
@@ -56,7 +57,7 @@ A secure and feature-rich password manager web application built with **HTML**, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/password-manager.git
+   git clone https://github.com/IMTHEREALSG/lockmate.git
    cd password-manager
    ```
 
@@ -76,11 +77,6 @@ A secure and feature-rich password manager web application built with **HTML**, 
    ```bash
    npm start
    ```
-
-5. Access the application:
-   - **Frontend:** Navigate to the Vercel deployment link.
-   - **Backend:** Navigate to the Render deployment link.
-
 ---
 
 ## Future Enhancements
